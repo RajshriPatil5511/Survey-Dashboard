@@ -1,0 +1,35 @@
+﻿@model VRS3LOGIN_AUTHENTICATION.Models.SurveyQuetionsModels
+
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = null;
+
+}
+ 
+        <form asp-action="AddOrEdit" asp-route-id="@Model.Quetionsid"  onsubmit="return jQueryAjaxPost(this);" autocomplete="off">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Quetionsid" />
+            <div class="form-group">
+                <label asp-for="Quetions" class="control-label"></label>
+                <input asp-for="Quetions" class="form-control" />
+                <span asp-validation-for="Quetions" class="text-danger"></span> 
+            </div>
+            <div class="form-group">
+                <label asp-for="QuetionsWeightage" class="control-label"></label>
+                <input asp-for="QuetionsWeightage" class="form-control" />
+                <span asp-validation-for="QuetionsWeightage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Factor" class="control-label"></label>
+                <input asp-for="Factor" class="form-control" />
+                <span asp-validation-for="Factor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

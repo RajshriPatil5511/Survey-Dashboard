@@ -1,0 +1,60 @@
+﻿@model List<VRS3LOGIN_AUTHENTICATION.Models.SurveyManagerModel>
+
+<div class="container">
+    <div style="margin-top: 10px"></div>
+    <div class="logo col-sm-12 text-center col-md-12"></div>
+    <div class="clearfix"></div>
+
+    @using (Html.BeginForm("FilteredIndex", "ManageSurveyInGreed", FormMethod.Post, new { @name = "Form1" }))
+    {
+        <fieldset>
+            <legend class="legend">All Surveys</legend>
+            Survey Name
+            <select id="ddlType" class="form-control" onchange="OnChange()" name="surveyName">
+                <option value="0">Select</option>
+                @foreach (var survey in ViewBag.SurveyNames)
+                {
+                    <option value="@survey">@survey</option>
+                }
+            </select>
+            <div style="margin-top: 5px"></div>
+            <div class="test" height: auto; width:">
+                <div style="width:">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Survey Name</th>
+                                        <th>Questions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.ManageID</td>
+                                            <td>@item.surveyName</td>
+                                            <td>@item.Quetions</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    }
+</div>
+
+<script>
+    function OnChange() {
+        document.forms["Form1"].submit();
+    }
+
+    window.onload = function () {
+        $("#ddlType").val("@ViewBag.Selected");
+    }
+</script>

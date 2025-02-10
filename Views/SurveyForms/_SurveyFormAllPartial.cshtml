@@ -1,0 +1,81 @@
+﻿@model IEnumerable<VRS3LOGIN_AUTHENTICATION.Models.SurveyFormsModel>
+
+
+@{
+
+    Layout = null;
+
+}
+
+
+
+
+
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr class="table-primary">
+            <th>@Html.DisplayNameFor(model => model.SurveyName) <i class="fa fa-sort"></i></th>
+
+            <th>@Html.DisplayNameFor(model => model.Category) <i class="fa fa-sort"></i></th>
+            <th>@Html.DisplayNameFor(model => model.SubCategory) <i class="fa fa-sort"></i></th>
+            <th>@Html.DisplayNameFor(model => model.FormName) </th>
+            <th>Factor <i class="fa fa-sort"></i></th>
+            <th>Factor Weightage</th>
+
+            <th>@Html.DisplayNameFor(model => model.SurveyRantingtype)</th>
+           <th>Actions</th>
+
+         
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.SurveyName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Category)</td>
+                <td>@Html.DisplayFor(modelItem => item.SubCategory)</td>
+                <td>@Html.DisplayFor(modelItem => item.FormName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Section)</td>
+                <td>@Html.DisplayFor(modelItem => item.SectionWeightage)</td>
+                <td>@Html.DisplayFor(modelItem => item.SurveyRantingtype)</td>
+                
+                    @*  <a asp-action="Details" asp-route-id="@item.id" data-toggle="modal" data-target="#surveyModal">
+                <i class="fa-solid fa-eye fa-shake fa-2x text-primary"></i>
+                </a> *@
+
+
+
+                <td>
+                    <a onclick="showInPopUp('@Url.Action("Edit","SurveyForms",new{id =item.id},Context.Request.Scheme)','Update Survey form')" class="btn text-white" data-toggle="tooltip"> <i class="fas fa-edit" style="color:#cdc70e;"></i></a>
+                   
+                    <form asp-action="Delete" asp-route-id="@item.id" onsubmit="return jQueryAjaxDelete(this);" class="d-inline">
+                        <button type="submit" class="btn text-white">
+                            <i class="fa-solid fa-trash" style="color: #e60a36;"></i>
+                        </button>
+                    </form>
+@* 
+                    <form asp-action="Delete"  asp-route-id="@item.id" onsubmit="return jQueryAjaxDelete(this);" class="d-inline">
+                        <input type="submit" value="Delete" class="btn btn-danger" />
+                    </form> *@
+
+                </td>
+
+                  @*   <button type="button" class="btn btnbtn-primary" data-toggle="ajax-modal" data-target="#UpdateFormModal" data-url="@Url.Action("Edit/{item.id}")">
+                        Update
+                    </button>
+                    <button type="button" class="btn btnbtn-primary" data-toggle="ajax-modal" data-target="#UpdateFormModal" data-url="@Url.Action("Details/{item.id}")">
+                        Details
+                    </button>
+                    <button type="button" class="btn btnbtn-primary" data-toggle="ajax-modal" data-target="#UpdateFormModal" data-url="@Url.Action("Delete/{item.id}")">
+                        delete
+                    </button> *@
+                    @*     <a asp-action="Details" asp-route-id="@item.id"><i class="fa-solid fa-eye fa-shake fa-2x text-primary"></i></a>
+                <a asp-action="Edit" asp-route-id="@item.id"><i class="far fa-edit" style="color: #234b90;"></i></a>
+                <a asp-action="Delete" asp-route-id="@item.id"><i class="fa-regular fa-trash-can" style="color: #174ba6;"></i></a> *@
+
+                
+            </tr>
+        }
+    </tbody>
+</table>

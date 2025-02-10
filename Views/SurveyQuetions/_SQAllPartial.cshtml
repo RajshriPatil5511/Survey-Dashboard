@@ -1,0 +1,64 @@
+﻿@model IEnumerable<VRS3LOGIN_AUTHENTICATION.Models.SurveyQuetionsModels>
+
+
+@{
+    
+   
+
+}
+
+
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr class="table-primary" >
+            <th>Sr NO</th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quetions)
+                <i class="fa fa-sort"></i>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuetionsWeightage)
+                
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Factor)
+                <i class="fa fa-sort"></i>
+            </th>
+          <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @Html.DisplayFor(modelitem => item.Quetionsid)</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quetions) 
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuetionsWeightage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Factor)
+                </td>
+                <td>
+                    <a onclick="showInPopUp('@Url.Action("AddOrEdit","SurveyQuetions",new{id =item.Quetionsid},Context.Request.Scheme)','Update Quetion')" class="btn text-white"  data-toggle="tooltip">
+                        <i class="fas fa-edit" style="color: #cdc70e;"></i></a>
+                   
+                    <form asp-action="Delete" asp-route-id="@item.Quetionsid" onsubmit="return jQueryAjaxDelete(this);" class="d-inline">
+                        <button type="submit" >
+                            <i class="fa-solid fa-trash" style="color: #e60a36;"></i>
+                        </button>
+                    </form>
+
+
+@*                     <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+ *@                
+
+                  
+
+                </td>
+            </tr>
+        }
+    </tbody>  
+</table>

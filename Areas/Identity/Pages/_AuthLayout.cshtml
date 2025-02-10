@@ -1,0 +1,95 @@
+﻿ @{
+    Layout = "/Views/Shared/_Layout.cshtml";
+
+}
+@section logRegister
+{
+    <main class="main">
+    <div class="container-fluid">
+        <div class="row min-vh-100 flex-center g-0">
+            <div class="col-lg-8 col-xxl-5 py-3 position-relative">
+                <img class="bg-auth-circle-shape" src="../../../assets/img/icons/spot-illustrations/bg-shape.png" alt="" width="250"><img class="bg-auth-circle-shape-2" src="../../../assets/img/icons/spot-illustrations/shape-1.png" alt="" width="150">
+                <div class="card overflow-hidden z-1">
+                    <div class="card-body p-0">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5 text-center bg-card-gradient">
+                                <div class="position-relative p-4 pt-md-5 pb-md-7" data-bs-theme="light">
+                                    <div class="bg-holder bg-auth-card-shape" style="background-image:url(../../../assets/img/icons/spot-illustrations/half-circle.png);"></div><!--/.bg-holder-->
+                                    <div class="z-1 position-relative">
+                                        <a class="link-light mb-4 font-sans-serif fs-4 d-inline-block fw-bolder" href="../../../index.html">Survey<br />
+                                            Admin-Dashboard</a>
+                                            <p class="opacity-75 text-white">
+                                                Welcome to Our Survey Admin Panel
+
+                                                Empower Your Insights, Seamlessly
+
+                                                📊 Create & Manage Surveys: Effortlessly craft surveys that capture valuable feedback. Customize questions, design, and distribution to gain actionable insights.
+                                            </p>
+                                    </div>
+                                </div>
+                                @* <div class="mt-3 mb-4 mt-md-4 mb-md-5" data-bs-theme="light">
+                                    <p class="pt-3 text-white">Have an account?<br><a class="btn btn-outline-light mt-2 px-4" href="../../../pages/authentication/card/login.html">Log In</a></p>
+                                </div> *@
+                            </div>
+                            <div class="col-md-7 d-flex flex-center">
+                                <div class="p-4 p-md-5 flex-grow-1">
+                                       @RenderBody()
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+@* <div class="row justify-content-center">
+    <div class="col-5 mt-5">
+        <div class="card login-logout-card">
+            <div class="card-header">
+                
+               @* <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Identity/Account/Login">LogIn</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Identity/Account/Login">Register</a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <div class="col-10 my-4">
+                        @RenderBody()
+                    </div>
+                </div>
+
+            </div>                  
+        </div>
+
+    </div>
+</div> *@
+
+
+
+}
+@section Scripts{
+    @await RenderSectionAsync("Scripts", required: false)
+    <script>
+        $(function () {
+            const $('.nav-tabs li a').each(
+                function () {
+                    const $this = $(this);
+                    if (currentPage.toLowerCase().indexOf($this.attr('href').toLowerCase()) - 1) {
+
+                        $this.addClass('active');
+                    }
+                })
+
+
+        })
+    </script>
+}

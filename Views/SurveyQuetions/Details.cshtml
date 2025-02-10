@@ -1,0 +1,36 @@
+﻿@model VRS3LOGIN_AUTHENTICATION.Models.SurveyQuetionsModels
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>SurveyQuetionsModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Quetions)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Quetions)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.QuetionsWeightage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.QuetionsWeightage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Factor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Factor)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Quetionsid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

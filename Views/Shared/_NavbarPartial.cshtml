@@ -1,0 +1,64 @@
+﻿
+
+@using Microsoft.AspNetCore.Identity
+@using VRS3LOGIN_AUTHENTICATION.Areas.Identity.Data
+
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+	 
+@* <ul class="navbar-nav"> *@
+
+
+     
+@if(SignInManager.IsSignedIn(User))
+{
+    
+
+	<nav>
+		<i class='bx bx-menu'></i>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+            <input type="checkbox" id="switch-mode" hidden>
+            <label for="switch-mode" class="switch-mode"></label>
+            <div class="dropdown">
+                <a id="manage" class="nav-link text-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Welcome <span class="text-danger font-weight-bold p-2">@UserManager.GetUserAsync(User).Result.FirstName!</span>  
+                </a>
+
+
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="manage">
+                    <li><a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <form id="logout-form" method="post" asp-area="Identity" asp-page="/Account/Logout">
+                            <input type="hidden" name="returnUrl" value="@Url.Action("Index", "Home", new { area = "" })">
+                            <button type="button" onclick="confirmLogout()">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+
+       
+
+       </div>
+
+@* 				<a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+ *@ 
+		
+     
+
+	</nav>
+	<!-- NAVBAR END-->
+
+   
+
+}
+<script>
+    function confirmLogout() {
+        if (confirm('Are you sure you want to logout?')) {
+            document.getElementById('logout-form').submit();
+        }
+    }
+</script>

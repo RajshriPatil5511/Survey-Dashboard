@@ -1,0 +1,74 @@
+﻿@model VRS3LOGIN_AUTHENTICATION.Models.SurveyFormsModel
+
+@{
+
+    Layout = null;
+    ViewData["Title"] = "Edit";
+}
+@* 
+<button class="btn btnbtn-primary" id="Update" type="submit" onclick="Edit();" @* data-bs-toggle="modal" data-bs-target="#UpdateFormModal" *@>
+@*     Update
+</button> 
+ *@
+   @*  <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+ *@
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+
+<form asp-action="Edit" asp-route-id="@Model.id" onsubmit="return jQueryAjaxPost(this);" autocomplete="off">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="id" />
+                            <div class="form-group">
+                                <label asp-for="SurveyName" class="control-label"></label>
+                                <input asp-for="SurveyName" class="form-control" />
+                                <span asp-validation-for="SurveyName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Category" class="control-label"></label>
+                                <input asp-for="Category" class="form-control" />
+                                <span asp-validation-for="Category" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="SubCategory" class="control-label"></label>
+                                <input asp-for="SubCategory" class="form-control" />
+                                <span asp-validation-for="SubCategory" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="FormName" class="control-label"></label>
+                                <input asp-for="FormName" class="form-control" />
+                                <span asp-validation-for="FormName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Section" class="control-label"></label>
+                                <input asp-for="Section" class="form-control" />
+                                <span asp-validation-for="Section" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="SectionWeightage" class="control-label"></label>
+                                <input asp-for="SectionWeightage" class="form-control" />
+                                <span asp-validation-for="SectionWeightage" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="SurveyRantingtype" class="control-label"></label>
+                                <input asp-for="SurveyRantingtype" class="form-control" />
+                                <span asp-validation-for="SurveyRantingtype" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" value="Submit" class="btn btn-primary" />
+                            </div>
+                        </form>
+          
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+ 

@@ -1,0 +1,247 @@
+﻿@model VRS3LOGIN_AUTHENTICATION.Models.SurveyFormsModel
+@*@{
+     ViewData["Title"] = "Create";
+}
+*@
+
+
+@* <section id="content"> *@
+    
+
+@* <h4 class="text-center">Create Survey</h4>
+
+<hr /> *@
+
+@*<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SurveyName" class="control-label"></label>
+                <input asp-for="SurveyName" class="form-control" />
+                <span asp-validation-for="SurveyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <input asp-for="Category" class="form-control" />
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubCategory" class="control-label"></label>
+                <input asp-for="SubCategory" class="form-control" />
+                <span asp-validation-for="SubCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FormName" class="control-label"></label>
+                <input asp-for="FormName" class="form-control" />
+                <span asp-validation-for="FormName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Section" class="control-label"></label>
+                <input asp-for="Section" class="form-control" />
+                <span asp-validation-for="Section" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SectionWeightage" class="control-label"></label>
+                <input asp-for="SectionWeightage" class="form-control" />
+                <span asp-validation-for="SectionWeightage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SurveyRantingtype" class="control-label"></label>
+                <input asp-for="SurveyRantingtype" class="form-control" />
+                <span asp-validation-for="SurveyRantingtype" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>*@
+    
+    @*surway form*@
+<div class="container-sm">
+    <div class="testbox">
+
+        <form id="DesignForm" asp-action="Create">
+           <div div asp-validation-summary="ModelOnly" class="banner"></div>
+            <div class="col-4">
+                <a asp-action="Index">
+                    <i class="fa-solid fa-arrow-left fa-2xl" style="color: #2b6bda;"></i>
+                </a>
+            </div>
+
+               @*  <h1>Create Survey </h1>
+
+                <p class="top-info">create a Survey form</p> *@
+
+            @*  <form asp-action="Create">*@
+@*                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+*@                <div class="form-group">
+                    <label asp-for="@Model.SurveyName" class="control-label"></label>
+                    <input asp-for="@Model.SurveyName" class="form-control" />
+                    <span asp-validation-for="@Model.SurveyName" class="text-danger"></span>
+                  </div>
+
+                @*<div class="item">
+                     <label asp-for="SurwayName" class="control-label"></label>
+                        <input asp-for="SurwayName" type="text" name="providing" />
+                        <span asp-validation-for="SurwayName" class="text-danger"></span>
+                </div>*@
+                 
+            <div class="item">
+                <p>Select Category<span class="required">*</span></p>
+                <div class="name-item">
+                    <input type="text" asp-for="@Model.Category"  placeholder="Category" required />
+                    <input type="text"  asp-for="@Model.SubCategory" placeholder="Sub-Category" required />
+                </div>
+            </div>
+           
+            <div class="contact-item">    
+                <div class="item">
+                    <p>Form Name<span class="required">*</span></p>
+                    <input type="text"  asp-for="@Model.FormName"  required />
+                </div>
+                <div class="item">
+                    <p>Factor<span class="required">*</span></p>
+                    <input type="text"  asp-for="@Model.Section" required />
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="item">
+                    <p>FactorWeightage<span class="required">*</span></p>
+                    <input type="text"  asp-for="@Model.SectionWeightage"  required />
+                </div>
+                <div class="item">
+                    <p>SurveyRantingtype<span class="required">*</span></p>
+                    <input type="text"  asp-for="@Model.SurveyRantingtype"  required />
+                </div>
+            </div>
+           @* <div class="position-item">
+                <div class="item">
+                    <p>What position are you applying for?<span class="required">*</span></p>
+                    <select required>
+                        <option value="1">Job 1</option>
+                        <option value="2">Job 2</option>
+                        <option value="3">Job 3</option>
+                        <option value="4">Job 4</option>
+                        <option value="5">Job 5</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <p>Available start date<span class="required">*</span></p>
+                    <input type="date" name="bdate" required />
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+            </div>*@
+
+          
+        
+            @*<div class="question">
+                <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SurwayQuetions.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SurwayQuetions.Quetions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SurwayQuetions.Option_1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SurwayQuetions.Option_2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SurwayQuetions.Option_3)    
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SurwayQuetions.Option_4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SurwayQuetions.CorrectOption)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+                        <tr>*@
+      @*    @foreach (var item in Model.SurwayQuetionsItteration)
+     {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+           </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quetions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Option_1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Option_2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Option_3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Option_4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CorrectOption)
+            </td>*@
+           @* <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+      }
+    </tbody>*@
+
+@*@*</table>*@
+                 
+        <hr />
+                </table>
+@*                   <form id="quizForm">
+                            <h1>Add Quetions</h1>
+                            <label for="question">Question:</label>
+                            <input type="text" id="question" required>
+                            <label for="option1">Option 1:</label>
+                            <input type="text" id="option1" required>
+                            <label for="option2">Option 2:</label>
+                            <input type="text" id="option2" required>
+                            <label for="option3">Option 3:</label>
+                            <input type="text" id="option3" required>
+                            <label for="option4">Option 4:</label>
+                            <input type="text" id="option4" required>
+                            <label for="correctOption">Correct Option:</label>
+                            <select id="correctOption" required>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                                <option value="4">Option 4</option>
+                            </select>
+                            <button type="button" id="addQuestion">Add Question</button>
+                     </form>*@
+                        <div class="btn-block">
+                            <button type="submit" >submit</button>
+                      @*</div
+                    
+                    </div>
+                </div>
+            </div>
+                *@
+    </form>
+        
+    </div>
+</div>
+
+@*surway form end *@
+
+
+@* </section> *@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

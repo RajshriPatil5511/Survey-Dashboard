@@ -1,0 +1,175 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = VRS3LOGIN_AUTHENTICATION
+build_property.RootNamespace = VRS3LOGIN_AUTHENTICATION
+build_property.ProjectDir = C:\Users\Dell\Downloads\Surway-Dashbord (4) (1)\Surway-Dashbord\VRS3LOGIN-AUTHENTICATION\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Dell\Downloads\Surway-Dashbord (4) (1)\Surway-Dashbord\VRS3LOGIN-AUTHENTICATION
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Areas/Identity/Pages/_AuthLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX0F1dGhMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/LaunchNewSurvey/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF1bmNoTmV3U3VydmV5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/ManageSurveyInGreed/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlU3VydmV5SW5HcmVlZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/Shared/_NavbarPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXJQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/Shared/_SidebarPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaWRlYmFyUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/Shared/_SurveyQuetionsPopUPPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdXJ2ZXlRdWV0aW9uc1BvcFVQUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/SurveyForms/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VydmV5Rm9ybXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/SurveyForms/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VydmV5Rm9ybXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/SurveyForms/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VydmV5Rm9ybXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/SurveyForms/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VydmV5Rm9ybXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/SurveyForms/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VydmV5Rm9ybXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/SurveyForms/_SurveyFormAllPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VydmV5Rm9ybXNcX1N1cnZleUZvcm1BbGxQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/SurveyManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VydmV5TWFuYWdlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/SurveyManager/liveSurvey.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VydmV5TWFuYWdlclxsaXZlU3VydmV5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/SurveyManager/_SurveyFormDropDownPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VydmV5TWFuYWdlclxfU3VydmV5Rm9ybURyb3BEb3duUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/SurveyQuetions/AddOrEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VydmV5UXVldGlvbnNcQWRkT3JFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/SurveyQuetions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VydmV5UXVldGlvbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/SurveyQuetions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VydmV5UXVldGlvbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/SurveyQuetions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VydmV5UXVldGlvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/SurveyQuetions/_SQAllPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VydmV5UXVldGlvbnNcX1NRQWxsUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/UserRoles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclJvbGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/UserRoles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclJvbGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Downloads/Surway-Dashbord (4) (1)/Surway-Dashbord/VRS3LOGIN-AUTHENTICATION/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-iqeka3tgy8

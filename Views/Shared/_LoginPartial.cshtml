@@ -1,0 +1,80 @@
+﻿ @using Microsoft.AspNetCore.Identity
+@using VRS3LOGIN_AUTHENTICATION.Areas.Identity.Data
+
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+  
+	 
+@* <ul class="navbar-nav"> *@
+
+
+
+@if(SignInManager.IsSignedIn(User))
+{  	
+	<!-- SIDEBAR -->
+		<section id="sidebar" >
+
+		<a class="brand" asp-controller="Home" asp-action="Index"><i class="bx bxs-smile" style="color: #1399ec;"></i> <span class="text">Survey Dashbord</span></a>
+
+
+		<ul class="side-menu top">
+				<li class="active">
+					<a asp-controller="Home" asp-action="Index">
+						<i class='bx bxs-dashboard'></i>
+						<span class="text">Dashboard</span>
+					</a>
+				</li>
+			<li>
+				<a asp-area="" asp-controller="SurveyManager" asp-action="liveSurvey">
+					<i class='bx bxs-doughnut-chart'></i>
+					<span class="text">live survey</span>
+				</a>
+			</li>
+				<li>
+					<a asp-area="" asp-controller="SurveyForms" asp-action="Index">
+					<i class='bx bxs-doughnut-chart'></i>
+					<span class="text">Survey Form</span>
+					</a>
+				</li>
+
+				<li>
+					<a asp-area="" asp-controller="SurveyQuetions" asp-action="Index">
+						<i class='bx bxs-doughnut-chart'></i>
+						<span class="text">Survey Quetions</span>
+					</a>
+				</li>
+
+				<li>
+					<a asp-area="" asp-controller="SurveyManager" asp-action="Index">
+						<i class='bx bxs-doughnut-chart'></i>
+						<span class="text">Manage Survey</span>
+					</a>
+				</li>
+
+				@* <li>
+					<a asp-area="" asp-controller="UserRoles" asp-action="Index">
+						<i class='bx bxs-shopping-bag-alt'></i>
+						<span class="text">create role</span>
+					</a>	
+				</li> *@
+
+				
+					@* <li>
+						<a href="#">
+							<i class='bx bxs-message-dots'></i>
+							<span class="text">Live Surveys</span>
+						</a>
+					</li> *@ 					
+			</ul>   
+			
+		</section>  
+    <!-- /SIDEBAR END -->
+	} 
+
+
+@* </ul> *@
+
+
+
+	

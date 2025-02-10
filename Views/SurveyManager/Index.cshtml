@@ -1,0 +1,276 @@
+﻿@model List<VRS3LOGIN_AUTHENTICATION.Models.SurveyManagerModel>
+
+<fieldset>
+    <legend>
+        <a asp-controller="LaunchNewSurvey" asp-action="Index">
+            <i class='bx bxs-doughnut-chart'></i>
+            <span class="text">Create New Survey</span>
+        </a>:
+    </legend>
+
+
+
+@using(Html.BeginForm("FilteredIndex", "SurveyManager", FormMethod.Post, new { @name = "Form1" }))
+
+{
+    <div class="container">
+        <div class="row align-items-start">
+            @* <div class="col">
+        <!-- Survey Name Dropdown -->
+        <div class="form-group mb-3">
+        <label for="surveyName" class="form-label">Select surveyForm</label>
+        <select asp-items="ViewBag.SurveyFormNames" class="form-select" onchange="showSecondDropdown()" id="surveyName" aria-label="Default select example">
+        <option value="0"></option>
+        </select>
+        </div>
+
+        </div> *@
+            <div class="col">
+                <div class="form-group mb-3">
+                    <label for="surveyName" class="form-lable">Select Survey </label>
+                    <select id="surveyName" class="form-control" onchange="showSecondDropdown()" name="surveyName">
+                        <option value="0">Select</option>
+                        @foreach (var survey in ViewBag.SurveyNames)
+                        {
+                            <option value="@survey">@survey</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <!-- Survey Questions Dropdown -->
+                <div class="form-group mb-3" id="secondDropdown">
+                    <label for="Quetions" class="form-label">Select Questions:</label>
+                    <select asp-items="ViewBag.SurveyQuestionNames" class="form-control" onchange="enableAddButton()" id="Quetions" aria-label="Default select example">
+                        <option value="0"></option>
+                    </select>
+                </div>
+            </div>
+
+
+            <!-- Add Data Button -->
+
+        </div>
+    </div>
+    <div class="col">
+        <button type="button" onclick="addDataToTable()" class="btn btn-info" id="addButton" disabled>Add Data</button>
+    </div>
+
+}
+   
+   @*  <form asp-action="SaveData" method="post"> *@
+        <table id="dataTable" class="table">
+            <thead>
+                <tr>
+                    <th>Survey Name</th>
+                    <th>Questions</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.surveyName</td>
+                        <td>@item.Quetions</td>
+                        <td>
+                            <form asp-action="DeleteConfirmed" asp-route-id="@item.ManageID" onsubmit="return jQueryAjaxDelete(this);" class="d-inline">
+                                <button type="submit" class="btn text-white">
+                                <i class="fa-solid fa-x" style="color: #e10e19;"></i>
+                                </button>
+                            </form>
+                        </td>
+                        
+                    </tr>
+                }
+            </tbody>
+        </table>
+       
+        <button type="button" onclick="submitData()" class="btn btn-primary" id="submitButton" disabled>Submit</button>
+  @*   </form> *@
+
+  </fieldset>
+<!-- Form for Filtered Index -->
+
+
+    
+
+      @*   @if (Model != null)
+        {
+            @using (Html.BeginForm("FilteredIndex", "ManageSurveyInGreed", FormMethod.Post, new { @name = "Form1" }))
+            {
+
+                Html.RenderPartial("_SurveyFormDropDownPartial", Model);
+
+            }
+      *@
+
+
+   
+
+    @*  
+              <div class="form-group mb-3" id="secondDropdown">
+                <label for="Quetions" class="form-label">Select Questions:</label>
+                <select id="Quetions" class="form-control" onchange="enableAddButton()" name="Quetions">
+                    @foreach (var item in ViewBag.SurveyQuetions as IEnumerable<SelectListItem>)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div> 
+    
+    *@
+
+    
+
+<!-- Survey selection dropdown -->
+
+<script>
+   @*  function OnChange() {
+      document.forms["Form1"].submit();
+    } *@
+
+    window.onload = function () {
+        $("#surveyName").val("@ViewBag.selected");
+    }
+
+    function showSecondDropdown() {
+        document.forms["Form1"].submit();
+        var firstDropdown = document.getElementById("surveyName");
+        var secondDropdown = document.getElementById("secondDropdown");
+
+        if (firstDropdown.value === "") {
+            secondDropdown.style.display = "none";
+        } else {
+            secondDropdown.style.display = "block";
+        }
+    }
+
+    function enableAddButton() {
+        var selectedsurveyName = document.getElementById("surveyName");
+        var selectedQuetions = document.getElementById("Quetions");
+        var addButton = document.getElementById("addButton");
+
+        var surveyNameText = selectedsurveyName.options[selectedsurveyName.selectedIndex].text;
+        var QuetionsText = selectedQuetions.options[selectedQuetions.selectedIndex].text;
+
+        if (surveyNameText && QuetionsText) {
+            addButton.disabled = false;
+        } else {
+            addButton.disabled = true;
+        }
+    } 
+
+    var lastSelectedClassValue = "";
+    var tableData = [];
+
+    var tableData = []; // Array to store added data
+    var lastSelectedSurveyValue; // Variable to store the last selected survey value
+
+    function addDataToTable() {
+        var selectedSurveyDropdown = document.getElementById("surveyName");
+        var selectedQuestionsDropdown = document.getElementById("Quetions");
+
+        var surveyNameText = selectedSurveyDropdown.options[selectedSurveyDropdown.selectedIndex].text;
+        var questionsText = selectedQuestionsDropdown.options[selectedQuestionsDropdown.selectedIndex].text;
+
+        // Check if the survey and questions are selected
+        if (surveyNameText && questionsText) {
+            // Check if the survey and questions are already in the tableData
+            var isDataExists = tableData.some(function (item) {
+                return item.surveyName === surveyNameText && item.questions === questionsText;
+            });
+
+            if (!isDataExists) {
+                // Perform an AJAX call to check alignment to survey
+                checkAlignmentToSurvey(surveyNameText, questionsText, function (alignmentResult) {
+                    if (alignmentResult === true) {
+                        // Create a new row in the table
+                        var table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+                        var newRow = table.insertRow(table.rows.length);
+
+                        // Insert data into the row
+                        var cell1 = newRow.insertCell(0);
+                        cell1.innerHTML = surveyNameText;
+
+                        var cell2 = newRow.insertCell(1);
+                        cell2.innerHTML = questionsText;
+
+                        // Store data in the array
+                        tableData.push({ surveyName: surveyNameText, questions: questionsText });
+
+                        // Store the last selected value and set it as a default
+                        lastSelectedSurveyValue = selectedSurveyDropdown.value;
+
+                        // Clear the dropdown selections
+                        selectedSurveyDropdown.value = "";
+                        selectedQuestionsDropdown.value = "";
+
+                        // Disable the first dropdown
+                        selectedSurveyDropdown.disabled = true;
+
+                        document.getElementById("addButton").disabled = true;
+
+                        // Set a default value to the last selected value
+                        selectedSurveyDropdown.value = lastSelectedSurveyValue;
+
+                        // Enable the submit button
+                        document.getElementById("submitButton").disabled = false;
+                    } else {
+                        alert("Selected survey and questions do not align.");
+                    }
+                });
+            }
+        }
+    }
+
+    function checkAlignmentToSurvey(surveyName, questions, callback) {
+        // Perform an AJAX call to check alignment to survey
+        // You will need to implement this function and make a request to your server to validate alignment
+        // For now, let's assume alignment is always true.
+        // Replace the condition with your actual validation logic.
+        var alignmentResult = true;
+        callback(alignmentResult);
+    }
+
+
+
+    function submitData() {
+        var tableRows = document.getElementById("dataTable").getElementsByTagName('tbody')[0].rows;
+        var tableData = [];
+
+        for (var i = 0; i < tableRows.length; i++) {
+            var surveyNameText = tableRows[i].cells[0].innerHTML;
+            var QuetionsText = tableRows[i].cells[1].innerHTML;
+
+            tableData.push({ surveyName: surveyNameText, Quetions: QuetionsText });
+        }
+
+        // Send the data to the server for saving
+        fetch('/SurveyManager/Index', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(tableData)
+        }).then(response => {
+            // Data saved successfully.
+            if (response.ok) {
+                alert('Data saved successfully');
+                clearTable();
+                // Redirect to the index page
+                window.location.href = '/SurveyManager/Index';
+            } else {
+                alert('Error saving data.');
+            }
+        });
+    }
+
+    function clearTable() {
+        var table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+        table.innerHTML = "";
+        document.getElementById("submitButton").disabled = true;
+    }
+
+
+</script>

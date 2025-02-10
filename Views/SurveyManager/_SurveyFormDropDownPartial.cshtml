@@ -1,0 +1,25 @@
+﻿ @model List<VRS3LOGIN_AUTHENTICATION.Models.SurveyManagerModel>
+
+
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                     @*    <th>ID</th>
+                                        *@ <th>Survey Name</th>
+                                        <th>Questions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                          @*   <td>@item.ManageID</td> *@
+                                            <td>@item.surveyName</td>
+                                            <td>@item.Quetions</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                       
+
+
